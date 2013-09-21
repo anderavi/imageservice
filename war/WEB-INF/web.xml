@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+    <display-name>Image Upload Application</display-name>
+    <description>
+        This is a simple web application to upload image to Picasa, Flickr, Facebook.
+    </description>
+
+    <servlet>
+        <servlet-name>HomeController</servlet-name>
+        <servlet-class>com.imageservice.web.HomeController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HomeController</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>GoogleCallbackController</servlet-name>
+        <servlet-class>com.imageservice.web.GoogleCallbackController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GoogleCallbackController</servlet-name>
+        <url-pattern>/gcallback</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ImageUploadController</servlet-name>
+        <servlet-class>com.imageservice.web.ImageUploadController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ImageUploadController</servlet-name>
+        <url-pattern>/imageupload</url-pattern>
+    </servlet-mapping>
+
+</web-app>     
